@@ -25,31 +25,24 @@ void setup() {
 
 void loop() {
 
- sensorValue = analogRead(sensorPin);
+sensorValue = analogRead(sensorPin);
 
   //IMPORTANT: The complete String has to be of the Form: 1234,1234,1234,1234;
   //(every Value has to be seperated through a comma (',') and the message has to
   //end with a semikolon (';'))
   
-        
-                BTserial.print("22.3 C");  
-               /* for(int i=0; i<5; i++){
-                  BTserial.print(","); 
-                  BTserial.print("1234 hPa");   
-                }*/
+                BTserial.print("1234");  
                 BTserial.print(",");  
-                BTserial.print("1234.5 hPa");  
+                BTserial.print("1234.0");  
                 BTserial.print(",");  
-                BTserial.print("86 %");
+                BTserial.print("1234 hPa");  
                 BTserial.print(",");  
-                BTserial.print("123.4 mV");
+                BTserial.print("500 ml/s");  
                 BTserial.print(",");  
-                BTserial.print("54 mW");
-                BTserial.print(",");  
-                BTserial.print("123 m/s");
+                BTserial.print(sensorValue);  
                 BTserial.print(";");
                 
         //message to the receiving device
            
-           delay(500);
+           delay(20);  
 }      
